@@ -1,0 +1,79 @@
+version: '3.8'
+services:
+  director:
+    build: ./director
+    environment:
+      PORT: "9000"
+    ports:
+      - "9000:9000"
+    depends_on:
+      - worker0
+      - worker1
+      - worker2
+      - worker3
+      - worker4
+      - worker5
+      - worker6
+      - worker7
+      - worker8
+
+  worker0:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000:8000"
+  worker1:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker2:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker3:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker4:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker5:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker6:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker7:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker8:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
+  worker9:
+    build: ./worker
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000"
